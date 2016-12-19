@@ -1,3 +1,10 @@
+<?php
+require_once "jssdk.php";
+// appId  和 秘钥
+$jssdk = new JSSDK("wxcc3f5e535a3862da", "e17de944cd1cda40711068a8e4d3d5c0");
+$signPackage = $jssdk->GetSignPackage();
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -44,6 +51,16 @@
 			</ul>
 		</footer>
 		<span class="bottomfoot"></span>
+		<script type="text/javascript">
+			 wx.config({
+			    debug: true,
+			    appId: '<?php echo $signPackage["appId"];?>',
+			    timestamp: <?php echo $signPackage["timestamp"];?>,
+			    nonceStr: '<?php echo $signPackage["nonceStr"];?>',
+			    signature: '<?php echo $signPackage["signature"];?>',
+			     jsApiList: []
+			  });
+		</script>
 	</body>
 	
 </html>
