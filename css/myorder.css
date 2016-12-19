@@ -1,0 +1,130 @@
+/*-----------全局样式-------------*/
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html{
+	font-size: 100px;
+}
+body{
+	font-family: 微软雅黑,microsoft yahei;
+	font-size: 16px;
+	width: 100%;
+	background: #efefef;
+}
+a{
+	text-decoration: none;
+}
+ul,ol{
+	list-style: none;
+}
+input{
+	outline:none;
+	border:none;
+}
+.clearfix:after{
+	content: '.';
+	display: block;
+	height: 0;
+	visibility: hidden;
+	clear: both;
+}
+
+
+/*---------header-----------*/
+header{
+	width: 100%;
+	height: 0.6rem;
+	background: #f9fafd;
+	position: relative;
+	border-bottom: 1px solid #e0e0e0;
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+header p{
+	width: 100%;
+	line-height: 0.60rem;
+	color: #333333;
+	font-size: 0.18rem;
+	text-align: center;
+}
+#returnMine{
+	display: inline-block;
+	width: 0.70rem;
+	height: 0.60rem;
+	background: url(../img/points1.png) no-repeat left center;
+	background-size: auto 50%;
+	position: absolute;
+	left: 10px;
+	top: 0;
+}
+#refresh{
+	display: inline-block;
+	width: 0.70rem;
+	height: 0.60rem;
+	background: url(../img/refresh.png) no-repeat right center;
+	background-size: auto 55%;
+	position: absolute;
+	right: 10px;
+	top: 0;
+}
+.top{
+	width: 100%;
+	height: 0.6rem;
+}
+
+/*------------main--------------*/
+.main{
+	width: 100%;
+	overflow: auto;
+}
+/*------------订单菜单------------*/
+.orderMenu{
+	width: 100%;
+	height: 0.54rem;
+	padding: 0 3%;
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #e0e0e0;
+	font-size: 1em;
+}
+.orderMenu ul{
+	width: 100%;
+	height: 0.54rem;
+	margin: 0 auto;
+}
+.orderMenu li{
+	line-height: 0.54rem;
+	width: 20%;
+	float: left;
+	text-align: center;
+}
+.orderMenu li a{
+	display: block;
+	line-height: 0.54rem;
+}
+.orderSelcet{
+	color: #ff3800;
+	border-bottom: 1px solid #ff3800;
+}
+.empty{
+	width: 100%;
+	height: 1.45rem;
+	background: url(../img/myorderbg.png) no-repeat center top;
+	background-size: auto 70%;
+	display: flex;align-items: flex-end;
+	margin-top: 100px;
+}
+.empty p{
+	width: 100%;
+	line-height: 0.40rem;
+	text-align: center;
+	color: #a8a8a8;
+}
+
+@media only screen and (min-width:320px ) and (max-width:360px) {
+	body{
+		font-size: 12px;
+	}
+}

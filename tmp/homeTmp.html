@@ -1,0 +1,233 @@
+<!--轮播-->
+<script type="text/html" id="lunboTmp">
+	<div class="swiper-wrapper">
+		<%for(n in data.act_info[0].act_rows){%>
+		<div class="swiper-slide">
+			<img src="<%=data.act_info[0].act_rows[n].activity.img%>">
+		</div>
+		<%}%>
+	</div>
+	<div class="swiper-pagination"></div>
+</script>
+
+<!--菜单-->
+<script type="text/html" id="classifyTmp">
+	<%for(var n in data.act_info[1].act_rows){%>
+	<li>
+		<i>
+				<img class="lazy" data-original="<%=data.act_info[1].act_rows[n].activity.img%>" />
+			</i>
+		<a>
+			<%=data.act_info[1].act_rows[n].activity.name%>
+		</a>
+	</li>
+	<%}%>
+</script>
+
+<script type="text/html" id="saleImgTmp">
+	<%for(var n in data.act_info[3].act_rows){%>
+	<li>
+		<img class="lazy" data-original="<%=data.act_info[3].act_rows[n].activity.img%>" />
+	</li>
+	<%}%>
+</script>
+
+<script type="text/html" id="storeImgTmp">
+	<div class="storelogo">
+		<img class="lazy" data-original="<%=data.act_info[4].act_rows[0].act_rows[0].chead_detail.img%>" />
+	</div>
+	<div class="storeImg">
+		<img class="lazy" data-original="<%=data.act_info[4].act_rows[1].act_rows[0].cactivity_detail.img%>" />
+		<img class="lazy" data-original="<%=data.act_info[4].act_rows[1].act_rows[1].cactivity_detail.img%>" />
+	</div>
+</script>
+
+<script type="text/html" id="storeUlIdTmp">
+	<ul>
+		<%for(var n in data.act_info[4].act_rows[2].act_rows){%>
+		<li>
+			<i>
+					<img  class="lazy" data-original="<%=data.act_info[4].act_rows[2].act_rows[n].cicons_detail.img%>"/>
+				</i>
+			<a>
+				<%=data.act_info[4].act_rows[2].act_rows[n].cicons_detail.name%>
+			</a>
+		</li>
+		<%}%>
+	</ul>
+</script>
+
+<script type="text/html" id="storesnacksUlTmp">
+	<%for(var n in data.act_info[4].act_rows[3].act_rows){%>
+	<li>
+		<img class="lazy" data-original="<%=data.act_info[4].act_rows[3].act_rows[n].activity.img%>" />
+	</li>
+	<%}%>
+</script>
+
+<!--优选水果-->
+<script type="text/html" id="fruitImg">
+	<img class="lazy" data-original="<%=data.act_info[5].act_rows[0].activity.img%>" />
+</script>
+
+<script type="text/html" id="fruitListTmp">
+
+	<%for(var n in data.act_info[5].act_rows[0].category_detail.goods){%>
+	<li>
+		<div>
+			<a>
+				<img class="lazy" data-original="<%=data.act_info[5].act_rows[0].category_detail.goods[n].img%>" />
+			</a>
+			<p>
+				<%=data.act_info[5].act_rows[0].category_detail.goods[n].name%>
+			</p>
+			<span class="jingxuan">精选</span>
+			<span class="introduction"><%=data.act_info[5].act_rows[0].category_detail.goods[n].specifics%></span>
+			<p class="price">
+				<span class="newPrice">￥<%=data.act_info[5].act_rows[0].category_detail.goods[n].partner_price%></span>
+				<span class="oldPrice">￥<%=data.act_info[5].act_rows[0].category_detail.goods[n].market_price%></span>
+			</p>
+		</div>
+		<span class="addThing">＋</span>
+	</li>
+	<%}%>
+</script>
+
+<!--牛奶面包-->
+<script type="text/html" id="milkImgTmp">
+	<img class="lazy" data-original="<%=data.act_info[5].act_rows[1].activity.img%>" />
+</script>
+
+<script type="text/html" id="milkListTmp">
+
+	<%for(var n in data.act_info[5].act_rows[1].category_detail.goods){%>
+	<li>
+		<div>
+			<a>
+				<img class="lazy" data-original="<%=data.act_info[5].act_rows[1].category_detail.goods[n].img%>" />
+			</a>
+			<p>
+				<%=data.act_info[5].act_rows[1].category_detail.goods[n].name%>
+			</p>
+			<span class="jingxuan">精选</span>
+			<span class="introduction"><%=data.act_info[5].act_rows[1].category_detail.goods[n].specifics%></span>
+			<p class="price">
+				<span class="newPrice">￥<%=data.act_info[5].act_rows[1].category_detail.goods[n].partner_price%></span>
+				<span class="oldPrice">￥<%=data.act_info[5].act_rows[1].category_detail.goods[n].market_price%></span>
+			</p>
+		</div>
+		<span class="addThing">＋</span>
+	</li>
+	<%}%>
+</script>
+
+<!--卤味熟食-->
+<script type="text/html" id="cookedImgTmp">
+	<img class="lazy" data-original="<%=data.act_info[5].act_rows[2].activity.img%>" />
+</script>
+
+<script type="text/html" id="cookedListTmp">
+
+	<%for(var n in data.act_info[5].act_rows[2].category_detail.goods){%>
+	<li>
+		<div>
+			<a>
+				<img class="lazy" data-original="<%=data.act_info[5].act_rows[2].category_detail.goods[n].img%>" />
+			</a>
+			<p>
+				<%=data.act_info[5].act_rows[2].category_detail.goods[n].name%>
+			</p>
+			<span class="jingxuan">精选</span>
+			<span class="introduction"><%=data.act_info[5].act_rows[2].category_detail.goods[n].specifics%></span>
+			<p class="price">
+				<span class="newPrice">￥<%=data.act_info[5].act_rows[2].category_detail.goods[n].partner_price%></span>
+				<span class="oldPrice">￥<%=data.act_info[5].act_rows[2].category_detail.goods[n].market_price%></span>
+			</p>
+		</div>
+		<span class="addThing">＋</span>
+	</li>
+	<%}%>
+</script>
+
+<!--饮料酒水-->
+<script type="text/html" id="drinkImgTmp">
+	<img class="lazy" data-original="<%=data.act_info[5].act_rows[3].activity.img%>" />
+</script>
+
+<script type="text/html" id="drinksListTmp">
+
+	<%for(var n in data.act_info[5].act_rows[3].category_detail.goods){%>
+	<li>
+		<div>
+			<a>
+				<img class="lazy" data-original="<%=data.act_info[5].act_rows[3].category_detail.goods[n].img%>" />
+			</a>
+			<p>
+				<%=data.act_info[5].act_rows[3].category_detail.goods[n].name%>
+			</p>
+			<span class="jingxuan">精选</span>
+			<span class="introduction"><%=data.act_info[5].act_rows[3].category_detail.goods[n].specifics%></span>
+			<p class="price">
+				<span class="newPrice">￥<%=data.act_info[5].act_rows[3].category_detail.goods[n].partner_price%></span>
+				<span class="oldPrice">￥<%=data.act_info[5].act_rows[3].category_detail.goods[n].market_price%></span>
+			</p>
+		</div>
+		<span class="addThing">＋</span>
+	</li>
+	<%}%>
+</script>
+
+<!--饮料酒水-->
+<script type="text/html" id="snacksImgTmp">
+	<img class="lazy" data-original="<%=data.act_info[5].act_rows[4].activity.img%>" />
+</script>
+
+<script type="text/html" id="snacksListTmp">
+
+	<%for(var n in data.act_info[5].act_rows[4].category_detail.goods){%>
+	<li>
+		<div>
+			<a>
+				<img class="lazy" data-original="<%=data.act_info[5].act_rows[4].category_detail.goods[n].img%>" />
+			</a>
+			<p>
+				<%=data.act_info[5].act_rows[4].category_detail.goods[n].name%>
+			</p>
+			<span class="jingxuan">精选</span>
+			<span class="introduction"><%=data.act_info[5].act_rows[4].category_detail.goods[n].specifics%></span>
+			<p class="price">
+				<span class="newPrice">￥<%=data.act_info[5].act_rows[4].category_detail.goods[n].partner_price%></span>
+				<span class="oldPrice">￥<%=data.act_info[5].act_rows[4].category_detail.goods[n].market_price%></span>
+			</p>
+		</div>
+		<span class="addThing">＋</span>
+	</li>
+	<%}%>
+</script>
+
+<!--方便速食-->
+<script type="text/html" id="fastFoodImgTmp">
+	<img class="lazy" data-original="<%=data.act_info[5].act_rows[5].activity.img%>" />
+</script>
+
+<script type="text/html" id="fastFoodListTmp">
+	<%for(var n in data.act_info[5].act_rows[5].category_detail.goods){%>
+	<li>
+		<div>
+			<a class="fastFoodbg fastFoodbg1">
+				<img class="lazy" data-original="<%=data.act_info[5].act_rows[5].category_detail.goods[n].img%>" />
+			</a>
+			<p>
+				<%=data.act_info[5].act_rows[5].category_detail.goods[n].name%>
+			</p>
+			<span class="jingxuan">精选</span>
+			<span class="introduction"><%=data.act_info[5].act_rows[5].category_detail.goods[n].specifics%></span>
+			<p class="price">
+				<span class="newPrice">￥<%=data.act_info[5].act_rows[5].category_detail.goods[n].partner_price%></span>
+				<span class="oldPrice">￥<%=data.act_info[5].act_rows[5].category_detail.goods[n].market_price%></span>
+			</p>
+		</div>
+		<span class="addThing">＋</span>
+	</li>
+	<%}%>
+</script>

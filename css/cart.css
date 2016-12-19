@@ -1,0 +1,380 @@
+/*-----------全局样式-------------*/
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html{
+	font-size: 100px;
+}
+body{
+	font-family: 微软雅黑,microsoft yahei;
+	font-size: 16px;
+	width: 100%;
+	background: #efefef;
+}
+a{
+	text-decoration: none;
+}
+ul,ol{
+	list-style: none;
+}
+input{
+	outline:none;
+	border:none;
+}
+.clearfix:after{
+	content: '.';
+	display: block;
+	height: 0;
+	visibility: hidden;
+	clear: both;
+}
+
+/*-----------header-----------*/
+.catrHeader{
+	width: 100%;
+	height: 0.5rem;
+	background: #f9fafd;
+	display: flex;
+	justify-content: center;
+	/*position: fixed;
+	top: 0;
+	left: 0;*/
+}
+.catrHeader div{
+	width: 0.80rem;
+	line-height: 0.50rem;
+	text-align: center;
+}
+/*.top{
+	width: 100%;
+	height: 0.5rem;
+}*/
+
+/*-------------主体cartMain-----------*/
+.cartMain_c{
+	width: 100%;
+	overflow: auto;
+}
+.personalInfo{
+	width: 100%;
+	min-height: 1.06rem;
+	border-top: 5px solid #FFFFFF;
+	border-bottom: 5px solid #FFFFFF;
+	border-image: url(../img/cartborder.png) 5  round;
+	background: #FFFFFF;
+	margin-bottom: 10px;
+	overflow: auto;
+}
+.personalInfo table{
+	width: 100%;
+}
+.personalInfo tr td{
+	/*height: 0.32rem;*/
+	line-height: 0.32rem;
+	color: #333333;
+}
+.personalInfo tr td:first-child{
+	width: 27%;
+	text-align: center;
+}
+.personalInfo tr td:nth-child(2){
+	width: 55%;
+}
+.personalInfo tr:first-of-type td:last-child{
+	line-height: 0.96rem;
+}
+.personalInfo tr:first-of-type td:last-child i{
+	display: inline-block;
+	width: 0.20rem;
+	height: 0.13rem;
+	background: url(../img/cartArrow.png) no-repeat center center;
+	background-size: 50% auto;
+}
+
+.cartMarket{
+	width: 100%;
+	min-height: 2rem;
+	background: #FFFFFF;
+}
+.market{
+	width: 100%;
+	height: 0.75rem;
+	border-bottom: 1px solid #e0e0e0;
+}
+.market ul{
+	width: 100%;
+}
+.market li{
+	width: 100%;
+}
+.market li:first-child{
+	padding: 0 15px;
+	height: 0.40rem;
+	line-height: 0.40rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.market li:first-child span{
+	display: inline-block;
+	width: 0.88rem;
+	height: 0.23rem;
+	line-height: 0.23rem;
+	text-align: center;
+	border-left: 5px solid #ffd600;
+	color: #999999;
+	font-weight: 500;
+}
+.market li:first-child input{
+	width: 1.0rem;
+	height: 0.35rem;
+	color: #ff3800;
+	border: 1px solid #ff3800;
+	border-radius: 8px;
+	background: #FFFFFF;
+	font-size: 0.18rem;
+}
+.market li:last-child{
+	height: 0.35rem;
+	color: #999999;
+}
+.market li:last-child p{
+	width: 100%;
+	line-height: 0.35rem;
+	text-indent: 15px;
+	font-size: 0.14rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.receive{
+	border-bottom: 1px solid #e0e0e0;
+	width: 100%;
+	height: 0.64rem;
+}
+.selcet{
+	width: 100%;
+	height: 0.64rem;
+	display: flex;
+	font-size: 0.18rem;
+}
+.selcet span:first-of-type{
+	display: inline-block;
+	width: 26%;
+	height: 0.64rem;
+	line-height: 0.64rem;
+	text-align: center;
+}
+.selcet span:nth-of-type(2){
+	display: inline-block;
+	width: 52%;
+	height: 0.64rem;
+	line-height: 0.64rem;
+	color: #e64f1a;
+}
+.selcet span:nth-of-type(3){
+	display: inline-block;
+	width: 24%;
+	height: 0.64rem;
+	line-height: 0.64rem;
+	text-align: center;
+	display: flex;
+}
+.selcet span:nth-of-type(3) i{
+	display: inline-block;
+	width: 0.15rem;
+	height: 0.64rem;
+	background: url(../img/cartArrow.png) no-repeat center center;
+	background-size: auto 28% ;
+}
+
+/*------选择送达时间--------*/
+#receiveTime{
+	position: relative;	
+}
+.selcettime{
+	width: 100%;
+	height: 1.8rem;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #FFFFFF;
+	z-index: 10;
+	display: none;
+	overflow: auto;
+}
+.title{
+	display: inline-block;
+	width: 100%;
+	height: 0.24rem;
+	line-height: 0.24rem;
+	font-weight: bold;
+}
+.selcettime p{
+	width: 100%;
+	line-height: 0.24rem;
+	text-indent: 24px;
+}
+.selcettime .pColor{
+	background: #ade1f5;
+}
+
+.remark{
+	width: 94%;
+	height: 0.64rem;
+	margin: 0 auto;
+	font-size: 0.18rem;
+	line-height: 0.64rem;
+}
+.remark span{
+	display: inline-block;
+	width: 26%;
+	height: 0.64rem;
+	line-height: 0.64rem;
+	text-align: center;
+}
+.remark input[type=text]{
+	width: 68%;
+	height: 0.42rem;
+	border: 1px solid #cecece;
+	border-radius: 10px;
+	font-size: 0.16rem;
+}
+
+.shoppingCart{
+	width: 100%;
+	height: 1.04rem;
+	border-bottom: 1px solid #e0e0e0;
+}
+.shoppingCart ul{
+	width: 100%;
+	height: 1.03rem;
+	display: flex;
+}
+.shoppingCart ul li:first-child{
+	width: 24%;
+	height: 1.03rem;
+	background: url(../img/cart1.png) no-repeat center center;
+	background-size: auto 25%;
+}
+.shoppingCart ul li:nth-child(2){
+	width: 15%;
+	height: 1.03rem;
+	display: flex;
+	align-items: center;
+}
+.shoppingCart ul li:nth-child(2) img{
+	width: 100%;
+	height: auto;
+}
+.shoppingCart ul li:last-child{
+	width: 61%;
+	height: 1.03rem;
+}
+.shoppingName{
+	width: 100%;
+	height: 0.44rem;
+	line-height: 0.44rem;
+	font-size: 0.18rem;
+	color: #333333;
+}
+.detailedness{
+	width: 100%;
+	height: 0.59rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.price{
+	color: #333333;
+}
+.amount{
+	min-width: 1.11ren;
+	height: 0.59rem;
+	display: flex;	
+	margin-right: 15px;
+	align-items: center;
+}
+.amount span{
+	display: inline-block;
+	width: 0.37rem;
+	height: 0.59rem;
+	line-height: 0.59rem;
+	text-align: center;
+	font-size: 0.25rem;
+}
+#subtract,#add{
+	width: 0.40rem;
+	height: 0.40rem;
+	border: 1px solid #ffbe89;
+	border-radius: 50%;
+}
+#subtract{
+	background: #ff4300 url(../img/add.png) no-repeat -13px -13px;
+}
+#add{
+	background: #ff4300 url(../img/add.png) no-repeat -75px -13px;
+}
+
+/*------选好了----------*/
+.valuation{
+	width: 100%;
+	height: 0.64rem;
+}
+.valuation ul{
+	width: 100%;
+	height: 0.64rem;
+	display: flex;
+	font-size: 0.18rem;
+}
+.valuation ul li:first-child{
+	width: 25%;
+	height: 0.64rem;
+	background: url(../img/cart1.png) no-repeat center center;
+	background-size: auto 50%;
+}
+.valuation ul li:nth-child(2){
+	width: 15%;
+	height: 0.64rem;
+	display: flex;
+	align-items: center;
+}
+.valuation ul li:nth-child(3){
+	width: 30%;
+	height: 0.64rem;
+	display: flex;
+	align-items: center;
+}
+#money{
+	color: #e64f1a;
+	font-size: 0.18rem;
+}
+.valuation ul li:last-child{
+	width: 30%;
+	height: 0.64rem;
+}
+.valuation ul li:last-child div{
+	width: 100%;
+	height: 0.64rem;
+	line-height: 0.64rem;
+	background: #ffd600;
+	text-align: center;vertical-align: middle;
+}
+
+
+
+@media only screen and (min-width:415px) {
+	html{
+		font-size: 115px;
+		margin: 0 auto;
+	}
+	body{
+		width: 480px;
+		margin: 0 auto;
+	}
+	footer,header{
+		width: 480px;
+	}
+}

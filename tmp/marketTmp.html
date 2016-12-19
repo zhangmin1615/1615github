@@ -1,0 +1,99 @@
+<!--左侧菜单模板-->
+<script type="text/html" id="hotSellListTmp">
+<%for(var n in data.categories){%>
+	<li group=<%=data.categories[n].id%>>
+		<span class="spanBorder"></span>
+		<%=data.categories[n].name%></li>
+<%}%>	
+</script>
+
+
+<!--右侧详细分类列表-->
+<script type="text/html" id="sortListTmp">
+	<%for(var m in data.products){%>
+	<ul class="detailSort" group=<%=m%>>
+		<%for(var n in data.products[m]){%>
+		<li>
+			<figure>
+					<img class="lazy" data-original="<%=data.products[m][n].img%>" />
+				<figcaption>
+					<p class="itemName">
+						<%=data.products[m][n].name%>
+					</p>
+					<p class="privilege">
+						<span class="handpick">精选</span>
+						<span class="oneFree"><%=data.products[m][n].pm_desc%></span>
+					</p>
+					<span class="sortNum"><%=data.products[m][n].specifics%></span>
+					<p class="price">
+						<span class="newPrice">￥<%=data.products[m][n].market_price%></span>
+						<span class="oldPrice">￥<%=data.products[m][n].partner_price%></span>
+					</p>
+				</figcaption>
+			</figure>
+			<span class="addCart">＋</span>
+		</li>
+		<%}%>
+	</ul>
+	<%}%>
+</script>
+
+
+<!--<script type="text/html" id="sortListTmp">
+		<ul class="detailSort">
+			<%for(var n in data.products[index]){%>
+			<li>
+				<figure>
+						<img class="lazy" data-original="<%=data.products[index][n].img%>" />
+					<figcaption>
+						<p class="itemName">
+							<%=data.products[index][n].name%>
+						</p>
+						<p class="privilege">
+							<span class="handpick">精选</span>
+							<span class="oneFree"><%=data.products[index][n].pm_desc%></span>
+						</p>
+						<span class="sortNum"><%=data.products[index][n].specifics%></span>
+						<p class="price">
+							<span class="newPrice">￥<%=data.products[index][n].market_price%></span>
+							<span class="oldPrice">￥<%=data.products[index][n].partner_price%></span>
+						</p>
+					</figcaption>
+				</figure>
+				<span class="addCart">＋</span>
+			</li>
+			<%}%>
+		</ul>
+</script>-->
+
+
+
+
+
+<!--<script type="text/html" id="sortListTmp">
+	<ul class="detailSort">
+		<%for(var n in data.products["103536"]){%>
+		<li>
+			<figure>
+					<img class="lazy" data-original="<%=data.products["103536"][n].img%>" />
+				<figcaption>
+					<p class="itemName">
+						<%=data.products["103536"][n].name%>
+					</p>
+					<p class="privilege">
+						<span class="handpick">精选</span>
+						<span class="oneFree"><%=data.products["103536"][n].pm_desc%></span>
+					</p>
+					<span class="sortNum"><%=data.products["103536"][n].specifics%></span>
+					<p class="price">
+						<span class="newPrice">￥<%=data.products["103536"][n].market_price%></span>
+						<span class="oldPrice">￥<%=data.products["103536"][n].partner_price%></span>
+					</p>
+				</figcaption>
+			</figure>
+			<span class="addCart">＋</span>
+		</li>
+		<%}%>
+	</ul>
+</script>-->
+

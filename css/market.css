@@ -1,0 +1,313 @@
+/*-----------全局样式-------------*/
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html{
+	font-size: 100px;
+}
+body{
+	font-family: 微软雅黑,microsoft yahei;
+	font-size: 16px;
+	width: 100%;
+	background: #FFFFFF;
+}
+a{
+	text-decoration: none;
+}
+ul,ol{
+	list-style: none;
+}
+input{
+	outline:none;
+	border:none;
+}
+.clearfix:after{
+	content: '.';
+	display: block;
+	height: 0;
+	visibility: hidden;
+	clear: both;
+}
+
+/*-----------------header---------------*/
+.marketHeader{
+	width:100%;
+	height: .6rem;
+	background: #ffd600;
+	display: flex;
+	justify-content: flex-end;
+	/*position: fixed;
+	left: 0;
+	top: 0;*/
+	z-index: 10;
+}
+.header-center{
+	width: 60%;
+	line-height: .6rem;
+	font-size: 1em;
+	display: flex;
+	justify-content: center;
+}
+.header-address{
+	display: inline-block;
+	width: 100%;
+	height: .6rem;
+	text-align: right;
+	line-height: 0.6rem;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: normal;
+}
+.hcontent{
+	/*display: inline-block;
+	width: 15%;*/
+	height: 0.6rem;
+	line-height: 0.6rem;
+	text-align: center;	
+}
+.header-right{
+	width: 20%;
+	height: 0.6rem;
+	margin-right: 0.1rem;
+}
+.search{
+	width: 0.6rem;
+	height: 0.6rem;
+	text-align: right;
+}
+.search i{
+	display: inherit;
+	width: 0.6rem;
+	height: 0.35rem;
+	background: url(../img/a1.png) no-repeat bottom right;
+}
+.search span{
+	display: inline-block;
+	widows: 0.6rem;
+	height: 0.25rem;
+	line-height: 0.25rem;
+	text-align: center;
+	font-size: 0.14rem;
+}
+/*--------------top--------------*/
+/*.top_ma{
+	width:100%;
+	height: .6rem;
+}*/
+
+/*---------main-----------*/
+.main_ma{
+	width: 100%;
+	display: flex;
+}
+.mainLeft{
+	width: 24%;
+	height: 100%;
+	overflow: auto;
+}
+.hotSell{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.hotSell li{
+	width: 100%;
+	height: 0.51rem;
+	line-height: 0.51rem;
+	background: #f8f8f8;
+	border-bottom: 1px solid #e0e0e0;
+	text-align: center;
+	color: #6d6d6d;
+	font-size: 0.14rem;
+}
+.hotSell .spanBorder{
+	display: inline-block;
+	width: 0.07rem;
+	height: 0.46rem;
+	background: #ffd600;
+	float: left;
+	display: none;
+	margin-top: 0.02rem;
+}
+.hotSell li:first-child .border{
+	display: block;
+}
+.hotSell li:nth-child(2){
+	background:#f8f8f8 url(../img/hot.jpg) no-repeat top right;
+	background-size: auto 70%;
+}
+
+.mainRight{
+	width: 76%;
+	height: 100%;
+	overflow: auto;
+}
+.space{
+	width: 100%;
+	height: 0.51rem;
+}
+.menu{
+	width: 76%;
+	overflow: auto;
+	display: flex;
+	position: fixed;
+	left: 26%;
+	top: 0.594rem;
+	background: rgba(255,255,255,1);
+	z-index: 10;
+}
+.menu li{
+	width: 50%;
+	height: 0.51rem;
+	line-height: 0.51rem;
+	text-align: center;
+	font-size: 0.14rem;
+	color: #777777;
+	display: flex;
+	justify-content: center;
+}
+.menu li:first-child{
+	background: url(../img/line.jpg) no-repeat right center;
+}
+.menu li i{
+	display: inline-block;
+	width: 0.15rem;
+	height: 0.51rem;
+	background: url(../img/load.png) no-repeat center center;
+	background-size: 50% auto;
+	
+}
+.sort{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+.detailSort{
+	width: 98%;
+	height: 100%;
+}
+.detailSort li{
+	border-top: 1px solid #e0e0e0;
+	width: 100%;
+	height: 1.17rem;
+	position: relative;
+}
+.detailSort figure{
+	width: 100%;
+	height: 1.16rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.detailSort figure img{
+	width: 37%;
+	height: 1.03rem;
+}
+.detailSort figcaption{
+	width: 63%;
+	height: 1.15rem;
+	display: flex;
+	flex-direction: column;
+	font-size: 0.14rem;
+}
+.itemName{
+	width: 100%;
+	line-height: 0.35rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.privilege{
+	width: 100%;
+	height: 0.20rem;
+}
+.handpick{
+	width: 0.36rem;
+	height: 0.18rem;
+	text-align: center;
+	color: #ff0000;
+	border: 1px solid #ff0000;
+	border-radius: 4px;
+	line-height: 0.18rem;
+	margin-right: 0.06rem;
+}
+.oneFree{
+	width: 0.50rem;
+	height: 0.18rem;
+	background: #ff0000;
+	color: #FFFFFF;
+	border: 1px solid #ff0000;
+	border-radius: 4px;
+}
+.sortNum{
+	color: #cacaca;
+	width: 100%;
+	line-height: 0.27rem;
+}
+.price{
+	width: 100%;
+	height:0.20rem
+}
+.newPrice,.oldPrice{
+	width: 0.31rem;
+	line-height: 0.20rem;
+	text-align: center;
+}
+.newPrice{
+	color: #ff5d30;
+}
+.oldPrice{
+	color: #a4a4a4;
+	text-decoration: line-through;
+}
+.addCart{
+	width: 0.33rem;
+	height: 0.33rem;
+	line-height: 0.33rem;
+	border: 1px solid #ebe1de;
+	border-radius: 50%;
+	color: #ff4300;
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	position: absolute;
+	bottom: 0.10rem;
+	right: 0.18rem;
+}
+
+
+
+@media only screen and (min-width:320px) and (max-width:414px){
+	html{
+		font-size: 100px;
+	}
+	body{
+		width: 100%;
+		margin: 0 auto;
+	}
+	footer{
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (min-width:415px) {
+	html{
+		font-size: 115px;
+		margin: 0 auto;
+	}
+	body{
+		width: 480px;
+		margin: 0 auto;
+	}
+	footer,header{
+		width: 480px;
+	}
+}
