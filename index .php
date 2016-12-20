@@ -23,13 +23,13 @@ $signPackage = $jssdk->GetSignPackage();
 
 	<body>
 		<!--主体-->
-		<div class="homeBox"></div>
+		<!-- <div class="homeBox"></div>
 		<div class="marketBox"></div>
 		<div class="orderBox"></div>
-		<div class="mineBox"></div>
+		<div class="mineBox"></div> -->
 
 		<!--footer菜单-->
-		<footer>
+		<!-- <footer>
 			<ul>
 				<li>
 					<div class="footerBg"><img src="img/footer1-1.png"/></div>
@@ -50,7 +50,9 @@ $signPackage = $jssdk->GetSignPackage();
 				</li>
 			</ul>
 		</footer>
-		<span class="bottomfoot"></span>
+		<span class="bottomfoot"></span> -->
+
+		<button onclick="getLocation()">获取地理位置</button>
 		<script type="text/javascript">
 			 wx.config({
 			    debug: true,
@@ -95,7 +97,7 @@ $signPackage = $jssdk->GetSignPackage();
 			     ]
 			  });
 
-
+			 function getLocation(){
 			 wx.getLocation({
 			    type: 'wgs84', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
 			    success: function (res) {
@@ -103,8 +105,12 @@ $signPackage = $jssdk->GetSignPackage();
 			        var longitude = res.longitude; // 经度，浮点数，范围为180 ~ -180。
 			        var speed = res.speed; // 速度，以米/每秒计
 			        var accuracy = res.accuracy; // 位置精度
+			        alert("经度："+longitude);
+			        alert("维度："+latitude);
 			    }
 			});
+
+			}
 		</script>
 	</body>
 	
