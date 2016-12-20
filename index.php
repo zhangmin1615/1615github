@@ -23,13 +23,13 @@ $signPackage = $jssdk->GetSignPackage();
 
 	<body>
 		<!--主体-->
-		<!-- <div class="homeBox"></div>
+		<div class="homeBox"></div>
 		<div class="marketBox"></div>
 		<div class="orderBox"></div>
-		<div class="mineBox"></div> -->
+		<div class="mineBox"></div>
 
 		<!--footer菜单-->
-		<!-- <footer>
+		<footer>
 			<ul>
 				<li>
 					<div class="footerBg"><img src="img/footer1-1.png"/></div>
@@ -50,10 +50,10 @@ $signPackage = $jssdk->GetSignPackage();
 				</li>
 			</ul>
 		</footer>
-		<span class="bottomfoot"></span> -->
-
+		<span class="bottomfoot"></span>
+<!-- 
 		<button onclick="getLocation()">获取地理位置</button>
-		<button onclick="getPosition()">查看位置</button>
+		<button onclick="getPosition()">查看位置</button> -->
 		<script type="text/javascript">
 			 wx.config({
 			    debug: true,
